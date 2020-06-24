@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+        <link href="css/styles.css" rel="stylesheet">
+        
+            <style>
+                /* .box{
+                    -moz-box-align: center;
+                    margin-top: -40px;
+                    margin-left: 300px;
+                    margin-right: 300px;
+                    padding: 40px;
+                    text-align: center;
+                    height: 800px;
+                    width: 750px;;
+                    background-color: rgb(4, 4, 102);       
+                } */
+
+                .box input[type="text"],.box input[type="password"]{
+                    text-align: center;
+                    width: 500px;
+                    margin-left: 300px; 
+                    border-color: midnightblue; 
+                    border-width: 2px; 
+                    font-weight: bold;
+                }
+
+                .box input[type="submit"]{
+                    text-align: center; 
+                    margin-left: 300px;
+                    margin-top: 50px;
+                    /* width: 500px; */
+                    margin-left: 520px;
+                    background-color: whitesmoke; 
+                    border-color: midnightblue; 
+                    border-width: 3px; 
+                    font-weight: bold; 
+                    color: black;
+                }
+
+                .box input[type="date"], .box input[type="email"]{
+                    text-align: center;
+                    margin-left: 300px;
+                    width: 500px;
+                }
+
+                .box input[type="text"]:hover,.box input[type="password"]:hover{
+                    /* width: 300px; */
+                    border-color: whitesmoke;
+                    background: lightgrey;
+                }
+
+                .box input[type="submit"]:hover{
+                    background: midnightblue;
+                    color: azure;
+                    /* border-radius: 40%; */
+                    border-color: floralwhite;
+                }
+            </style>
+
+    </head>
+    
+
+	<body>
+<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">Home</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <%for(i=0; i<nav.length; i++){%>
+            <li>
+                <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+            </li>
+        <%}%>
+      </ul>
+      <ul class="nav navbar-right navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
+          <ul class="dropdown-menu" style="padding:12px;">
+            <form class="form-inline">
+              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
+            </form>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>SignUp
+          <p class="lead"></p>
+        </h1>
+      </div>
+      <div class="col-md-5">
+        <div class="well well-lg"> 
+          <div class="row">
+            <div class="col-sm-12">
+              
+			
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="top-spacer"> </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+  
+</div>
+
+
+<div class="container">
+  <div class="row">
+    
+    <div class="col-md-12"> 
+      
+      <div class="panel">
+        <div class="panel-body">
+          
+          
+          
+          <!--/signup-->
+          <div class="box">       
+            <input type="text" class="form-control" placeholder="Name" id="nm" aria-required="true" required="required"><br>
+            <input type="text" class="form-control" placeholder="Address line 1" id="add1" aria-required="true" required="required"><br>
+            <input type="text" class="form-control" placeholder="Address line 2" id="add2"><br>
+            <input type="text" class="form-control" placeholder="Address line 3" id="add3" ><br>
+            <input type="date" class="form-control" placeholder="D.O.B" id="dob" aria-required="true" required="required"><br>
+            <input type="email" class="form-control" placeholder="Mail ID" id="mail" aria-required="true" required="required" pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$"><br>
+            <input type="text" class="form-control" placeholder="Contact Number" id="num" aria-required="true" required="required" pattern="^([+][9][1]|[9][1]|[0]){0,1}([7-9]{1})([0-9]{9})$"><br>
+            <input type="text" class="form-control" placeholder="User name" id="user" aria-required="true" required="required"><br>
+            <input type="password" class="form-control" placeholder="Password" id="pass1" aria-required="true" required="required"><br>
+            <input type="password" class="form-control" placeholder="Confirm password" id="pass2" aria-required="true" required="required"><br>
+    
+            <input type="submit" class="btn btn-default" value="Signup" name="submit" onclick="validateSignup();"><br><br>
+    
+            <p style="color: white;">Already have an account???</p>
+            <a href="Log_in.html" style="color: white; text-align: right; text-decoration: underline;">Login here</a>
+        </div>
+    
+        <br><br>
+        
+        <script>
+            function validateSignup(){
+                var nm=document.getElementById("nm").value;
+                var add1=document.getElementById("add1").value;
+                var add2=document.getElementById("add2").value;
+                var add3=document.getElementById("add3").value;
+                var dob=document.getElementById("dob").value;
+                var mail=document.getElementById("mail").value;
+                var num=document.getElementById("num").value;
+                var user=document.getElementById("user").value;
+                var pass1=document.getElementById("pass1").value;
+                var pass2=document.getElementById("pass2").value;
+    
+                var mobPattern=/^\d{10}$/;
+                var mailPattern=/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$/;
+                var pwdPattern=/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}/;
+    
+                if(nm==""){
+                    alert('Name cannot leave empty');
+                }
+                else if(add1==""){
+                    alert('Please enter your address line');
+                }
+                else if(dob==""){
+                    alert('Date of Birth should be filled');
+                }
+                else if(num==""){
+                    alert('please enter your mobile number');
+                }
+                else if(isNaN(num)){
+                    alert('Phone number can only be numbers');
+                }
+                else if(mail==""){
+                    alert('Please enter your mail id');
+                }
+                else if(mail!=""){
+                    if(mail.value.match(mailPattern)){
+                        alert('mail id is validated');
+                    }  
+                    else{
+                        alert('invalid mail id');
+                    }
+                }
+                else if(user==""){
+                    alert('please enter Username');
+                }
+                else if(pass1==""){
+                    alert('please enter yoyr password');
+                }
+                else if(pass2==""){
+                    alert('Please confirm your password');
+                }
+                else if(pass1!=pass2){
+                    alert('Passwords should be the same');
+                }
+                else{
+                    alert('Your sign up is success! Please login using your credentials');
+                    
+                    if(pass1.value.match(pwdPattern)){
+                           alert('Password is validated');
+                    }
+                    else{
+                        alert('Password should contain at least ONE CAPITAL letter, ONE LOWER CASE, and at least ONE NUMBER');
+                    }
+                }
+            }
+    
+        </script>
+    
+          <!--/signup-->
+          
+          
+          <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
+        
+          
+        </div>
+      </div>
+                                                                                       
+	                                                
+                                                      
+   	</div><!--/col-12-->
+  </div>
+</div>
+                                                
+                                                                                
+<hr>
+
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col col-sm-12">
+      
+      <h1>Follow Us</h1>
+      <div class="btn-group">
+       <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<hr>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <ul class="list-inline">
+          <li><i class="icon-facebook icon-2x"></i></li>
+          <li><i class="icon-twitter icon-2x"></i></li>
+          <li><i class="icon-google-plus icon-2x"></i></li>
+          <li><i class="icon-pinterest icon-2x"></i></li>
+        </ul>
+        
+      </div>
+      <div class="col-sm-6">
+          <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+      </div>
+    </div>
+  </div>
+</footer>
+	<!-- script references -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
