@@ -145,10 +145,11 @@
           <!--/login content-->
 
           <div class="box">
+            <form action="" method="post">
             <input type="text" class="form-control" placeholder="Username" id="user"><br>
             <input type="password" class="form-control" placeholder="Password" id="pass"><br>
             <input type="submit" class="btn btn-default" value="Login" name="submit" onclick="validateLogin();"><br><br>
-    
+            </form>
             <!-- <a href="forgotPwd.html" style="color: white; ; text-align: left; text-decoration: underline;">forgot password</a><br> -->
             <!-- <a href="Sign_up.html" style="color: white; text-align: right; text-decoration: underline;">Sign up here</a> -->
         </div>
@@ -160,10 +161,12 @@
                 var user=document.getElementById("user").value;
                 var pass= document.getElementById("pass").value;
     
-                // Given that the username= 'Annzzz142' and password= 'annzzz@142'
+                var dbUser= find({"username": " "+user});
+                var dbPass= find({"password": " "+pass});
+
     
-                if(user=="Annzzz142"){
-                    if(pass=="ann"){
+                if(user==dbUser){
+                    if(pass==dbPass){
                         alert("Successfully Logged in!!!");
                     }
                     else{
